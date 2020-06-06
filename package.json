@@ -1,0 +1,21 @@
+{
+  "name": "@jeonghojeong/ctl",
+  "description": "Create TypeScript library with a single step",
+  "repository": "github:JeongHoJeong/ctl",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "bin": {
+    "ctl": "./bin/ctl.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.11",
+    "typescript": "^3.9.5"
+  },
+  "files": ["templates/**", "bin/**"]
+}
