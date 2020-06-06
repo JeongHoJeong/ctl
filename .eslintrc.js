@@ -3,18 +3,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-{{ @if(it.isReactLibrary) }}
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-{{ /if }}
   ],
-{{ @if(it.isReactLibrary) }}
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-{{ /if }}
   rules: {
     'max-len': ['error', {'code': 120}],
     '@typescript-eslint/indent': ['error', 2],

@@ -1,0 +1,14 @@
+// Start writing your library code here!
+{{ @if(it.isReactLibrary) }}
+import * as React from 'react'
+
+export const MyComponent: React.FC = () => {
+  return (
+    <div id='root'>
+      Hello, TypeScript React!
+    </div>
+  )
+}
+{{ #else }}
+export const add = (a: number, b: number): number => a + b
+{{ /if }}

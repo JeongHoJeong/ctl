@@ -1,5 +1,7 @@
 # CTL: Create TypeScript Library
 
+Opinionated TypeScript library project generator.
+
 ## How to use
 ```bash
 yarn global add @jeonghojeong/ctl

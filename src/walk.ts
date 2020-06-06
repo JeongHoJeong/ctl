@@ -10,7 +10,11 @@ function isPromise(object: unknown): object is Promise<any> {
   )
 }
 
-export async function walk(dir: string, callback: (path: string, relativePath: string) => any, partialPath: string = ''): Promise<void> {
+export async function walk(
+  dir: string,
+  callback: (path: string, relativePath: string) => any,
+  partialPath = '',
+): Promise<void> {
   const paths = await util.promisify(fs.readdir)(dir)
 
   await Promise.all(paths.map(async childPath => {

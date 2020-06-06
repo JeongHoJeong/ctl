@@ -1,0 +1,19 @@
+// Start writing your test here!
+{{ @if(it.isReactLibrary) }}
+import * as React from 'react'
+import { render, screen } from '@testing-library/react'
+
+import { MyComponent } from '@/index'
+
+test('MyComponent', () => {
+  render(<MyComponent />)
+  const element = screen.getByText('Hello, TypeScript React!')
+  expect(element).toBeTruthy()
+})
+{{ #else }}
+import { add } from '@/index'
+
+test('add', () => {
+  expect(add(1, 2)).toBe(3)
+})
+{{ /if }}

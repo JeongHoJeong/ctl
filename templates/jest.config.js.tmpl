@@ -1,10 +1,10 @@
 module.exports = {
   transform: {
-    '^.+\\.ts$': 'ts-jest',
+    '^.+\\.ts{{ @if(it.isReactLibrary) }}x?{{ /if }}$': 'ts-jest',
   },
-  testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.ts$',
+  testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.ts{{ @if(it.isReactLibrary) }}x?{{ /if }}$',
   testPathIgnorePatterns: ['/lib/', '/node_modules/'],
-  moduleFileExtensions: ['js', 'ts'],
+  moduleFileExtensions: ['js', 'ts'{{ @if(it.isReactLibrary) }}, 'tsx'{{ /if }}],
   collectCoverage: true,
   rootDir: '.',
   moduleNameMapper: {

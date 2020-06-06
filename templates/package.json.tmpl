@@ -1,13 +1,13 @@
 {
-  "name": "ctl-project",
+  "name": "{{ it.projectName }}",
   "version": "0.1.0",
   "files": [
     "lib"
   ],
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc",
-    "lint": "eslint src/** tests/** --no-error-on-unmatched-pattern --ext .ts",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint src/** tests/** --no-error-on-unmatched-pattern --ext .ts{{ @if(it.isReactLibrary) }},.tsx{{ /if }}",
     "test": "jest"
   }
 }
