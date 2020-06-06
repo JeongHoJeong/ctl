@@ -2,6 +2,10 @@
   "name": "@jeonghojeong/ctl",
   "description": "Create TypeScript library with a single step",
   "repository": "github:JeongHoJeong/ctl",
+  "author": {
+    "name": "Jeongho Jeong",
+    "email": "jeongho.jeong12@gmail.com"
+  },
   "version": "0.1.0",
   "publishConfig": {
     "access": "public",
